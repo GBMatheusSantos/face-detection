@@ -1,11 +1,11 @@
 import cv2
 
 
-xml_hear_face = 'haarcascade_frontalface_alt2.xml'
-xml_hear_mouth = 'haarcascade_mouth.xml'
+face_haarcascade = './trained-classifiers/haarcascade_frontalface_alt2.xml'
+mouth_haarcascade = './trained-classifiers/haarcascade_mouth.xml'
 
-faceClassifier = cv2.CascadeClassifier(xml_hear_face)
-mouthClassifier = cv2.CascadeClassifier(xml_hear_mouth)
+faceClassifier = cv2.CascadeClassifier(face_haarcascade)
+mouthClassifier = cv2.CascadeClassifier(mouth_haarcascade)
 
 capture = cv2.VideoCapture(0)
 capture.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
